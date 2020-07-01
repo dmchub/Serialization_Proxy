@@ -4,5 +4,10 @@ public class Main {
 
         calculator.calc(1);
         calculator.calc(1);
+
+        Calculator cached = (Calculator) ProxyUtils.makeCached(calculator);
+        cached.calc(1);
+        cached.calc(2);
+        cached.calc(1);
     }
 }
